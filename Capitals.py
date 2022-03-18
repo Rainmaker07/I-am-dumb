@@ -12,7 +12,7 @@ print("Rules: All countries and capitals have to be capitalized!\n"
 capitals_input = input("Name a capital city of a eurozone country: ")
 if capitals_input in capitals:
     print("Well done!")
-    countries_input = input("Which country is it the capital of? ")
+    countries_input = input(f"Which country is {capitals_input} the capital of? ")
     if countries_input in countries:
         if capitals.index(capitals_input) == countries.index(countries_input):
             print("That's correct")
@@ -41,11 +41,11 @@ if capitals_input in capitals:
                 "Austria": ["Italy", "Slovenia", "Slovakia", "Germany"],
                 "Lithuania": ["Latvia"],
                             }
-            neighbor_input = input("Can you name any of its neighboring countries that also use the Euro? (excluding "
-                                   "maritime borders) ")
+            neighbor_input = input(f"Can you name any of {countries_input}'s neighboring countries that also use the "
+                                   f"Euro? (excluding maritime borders) ")
             if neighbor_input in (neighbors[countries_input]):
                 print("That is correct!")
-                capitals_input_2 = input("Do you also know its capital? ")
+                capitals_input_2 = input(f"Do you also know {neighbor_input}'s capital? ")
                 if capitals_input_2 in capitals:
                     if capitals.index(capitals_input_2) == countries.index(neighbor_input):
                         print("Well done!")
